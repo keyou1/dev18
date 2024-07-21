@@ -127,6 +127,10 @@ git status              -> 查看状态
 git config              -> 进行配置
 git add . 或者 文件      ->  添加到缓存区
 git commit -m ""        -> 添加到本地存储，并设置提交信息
+git log                 -> 查看本地仓库的日志
+git branch -a           -> 查看本地的所有分支信息
+git checkout master     -> 切换到master分支
+git checkout -b dev     -> 创建一个新的分支并进行切换
 
 git remote add origin 你的仓库地址（可以是开源的仓库或者你公司的仓库）
 查看有哪些remote：git remote
@@ -150,4 +154,9 @@ git remote add origin 你的仓库地址（可以是开源的仓库或者你公�
 本地仓库中没有远程仓库中的一些修改记录，导致本地与远程不一致（远程的记录更新）
 
 如何解决？
-git pull 同步一下远程仓库的记录
+1.git pull 同步一下远程仓库的记录
+2.git status 查看是否还有冲突，如果有冲突，直接修改冲突的代码
+3.git add .
+4.git commit -m "xxx"
+5.git push
+
